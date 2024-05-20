@@ -131,3 +131,51 @@ def filtrar_por_pais(pais):
               
             except FileNotFoundError:
                 print("pais não encontrado no banco de dados")
+def atualizar_receita(nome_arquivo):
+   
+    file = open(f"{nome_arquivo}.txt", 'r', encoding='utf-8')
+    linhas = file.readlines()
+    file.close()
+
+   
+    nome = linhas[0].strip()
+    pais = linhas[2].strip()
+    index_ingredientes = linhas.index("Ingredientes:\n")
+    index_modo_preparo = linhas.index("Modo de Preparo:\n")
+    
+    ingredientes = linhas[index_ingredientes + 1:index_modo_preparo]
+    modo_preparo = linhas[index_modo_preparo + 1:]
+
+    def exibir_lista(lista):
+        for i, item in enumerate(lista, 1):
+            print(f"{i}. {item.strip()}")
+
+    def alterar_lista(lista):
+        while True:
+            exibir_lista(lista)
+            alterar = input("Deseja alterar algum item? (sim/não): ").strip().lower()
+            if alterar != 'sim':
+                break
+            indice = int(input("Qual o número do item que deseja alterar? ")) - 1
+            novo_valor = input("Digite o novo valor: ").strip()
+            lista[indice] = novo_valor + '\n'
+
+    
+    alterar = input("Deseja alterar algum ingrediente? (sim/não): ").strip().lower()
+    if alterar == 'sim':
+        alterar_lista(ingredientes)
+
+    
+    alterar = input("Deseja alterar o modo de preparo? (sim/não): ").strip().lower()
+    if alterar == 'sim':
+        alterar_lista(modo_preparo)
+
+  
+    file = open(f"{nome_arquivo}.txt", 'w', encoding='utf-8')
+    file.write(f"{nome}\n\n{pais}\n\nIngredientes:\n")
+    file.writelines(ingredientes)
+    file.write("\nModo de Preparo:\n")
+    file.writelines(modo_preparo)
+    file.close()
+
+    print("Receita atualizada com sucesso!")
