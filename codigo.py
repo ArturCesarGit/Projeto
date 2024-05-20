@@ -16,4 +16,16 @@ def aleatoria():
     receita = open(f"{nome}.txt","r",encoding="utf8")
     print(receita.read())
     receita.close()
+def favoritar(nome_fav):
+    while True:
+        try:
+            nome = open(f"{nome_fav}.txt", "r", encoding="utf8")
+            nome.close()    
+            favoritas = open("favoritadas.txt", "a", encoding="utf8")
+            favoritas.write(f"\n{nome_fav}\n")
+            favoritas.close()
+            break
+        
+        except FileNotFoundError:
+            print("receita não encontrada")
 
