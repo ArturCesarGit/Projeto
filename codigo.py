@@ -106,3 +106,28 @@ def excluir_receita(receita):
                 receita = input()
             else:
                 break
+def filtrar_por_pais(pais):
+            try:
+        
+    
+                receitas_filtradas = []
+                paises = open("receitas.txt", "r", encoding="utf8")
+                for receita in paises:
+                     receita = receita.strip()
+                
+                     file = open(f"{receita}.txt", "r", encoding="utf8")
+                     for linha in file:
+                         if pais in linha:
+                             receitas_filtradas.append(receita) 
+                             break
+                         file.close()
+            
+                paises.close()
+                for i  in range(len(receitas_filtradas)):
+                  file = open(f"{receitas_filtradas[i]}.txt","r",encoding="utf8")
+                  print(file.read())
+                  file.close()
+            
+              
+            except FileNotFoundError:
+                print("pais não encontrado no banco de dados")
