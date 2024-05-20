@@ -83,6 +83,26 @@ def cadastrar_receita():
         
         visualizar(nome)
     
-
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
+def excluir_receita(receita):
+    while True:
+        try:
+            nome = open(f"{receita}.txt","w",encoding="utf8")
+            nome.close()
+            banco = open("receitas.txt", "r", encoding="utf8")
+            linhas  = banco.readlines()
+            banco.close()
+            banco = open("receitas.txt","w",encoding="utf8")
+            for linha in linhas:
+                if receita not in linha:
+                    banco.write(linha)
+            banco.close()
+            break
+        except FileNotFoundError:
+            print("receita não encontrado no banco de dados")
+            escolha = input("deseja excluir outra receita?(s/n)").lower()
+            if escolha == "s":
+                receita = input()
+            else:
+                break
