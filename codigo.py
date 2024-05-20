@@ -28,4 +28,20 @@ def favoritar(nome_fav):
         
         except FileNotFoundError:
             print("receita não encontrada")
+def visualizar(receita):
+    try:
+        file = open("receitas.txt", "r", encoding="utf8")
+        linhas = file.readlines()
+        if (f"{receita}\n") not in linhas:
+            file.close()
+            print("receita não encontrada")
+            
+        else:
+            file.close()
+            printar = open(f"{receita}.txt","r",encoding="utf8")
+            print(printar.read())
+            printar.close()
+    except FileNotFoundError:
+        print("arquivo não encontrado")
+
 
