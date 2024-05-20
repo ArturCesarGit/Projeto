@@ -1,0 +1,31 @@
+Nome: Taco
+
+país: méxico
+
+Ingredientes:
+- 500g de carne moída.
+- 1 cebola média, picada.
+- 2 dentes de alho, picados.
+- 1 pimentão vermelho, picado.
+- 1 pimentão verde, picado.
+- 1 tomate grande, picado.
+- 1 colher de chá de cominho em pó.
+- 1 colher de chá de páprica.
+- 1 colher de chá de pimenta chili em pó.
+- Sal e pimenta a gosto.
+- Tortillas de milho.
+- Óleo para refogar.
+- Folhas de alface, picadas (opcional).
+- Queijo cheddar ralado (opcional).
+- Sour cream (opcional).
+- Molho de pimenta (opcional).
+
+Modo de Preparo:
+1. Em uma frigideira grande, aqueça um pouco de óleo e refogue a cebola e o alho até ficarem macios.
+2. Adicione a carne moída e cozinhe até que esteja dourada.
+3. Adicione os pimentões e o tomate picado, e cozinhe até que os vegetais estejam macios.
+4. Tempere com cominho, páprica, pimenta chili, sal e pimenta. Misture bem e cozinhe por mais alguns minutos.
+5. Aqueça as tortillas de milho em uma frigideira seca até ficarem quentes e ligeiramente douradas.
+6. Monte os tacos colocando a mistura de carne nas tortillas aquecidas.
+7. Adicione alface picada, queijo cheddar ralado, sour cream e molho de pimenta a gosto.
+8. Sirva os tacos imediatamente e aproveite!
