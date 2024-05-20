@@ -25,3 +25,13 @@ Permite ao usuário visualizar uma receita aleatória do banco de dados.
 
 9. Encerrar
 Encerra a execução do programa.
+
+Utilização
+Ao executar o programa, o usuário será apresentado com um menu contendo as opções numéricas correspondentes às funcionalidades descritas acima. O usuário pode escolher uma opção digitando o número correspondente e pressionando Enter.
+
+Banco de Dados
+O sistema utiliza dois arquivos de texto para armazenar as receitas:
+
+receitas.txt: Contém uma lista de todas as receitas cadastradas.
+favoritadas.txt: Contém uma lista das receitas favoritas.
+Cada receita é armazenada em um arquivo de texto separado, com o nome da receita como o nome do arquivo. Os detalhes da receita, como nome, país de origem, ingredientes e modo de preparo, são armazenados dentro do respectivo arquivo da receita.
