@@ -179,3 +179,28 @@ def atualizar_receita(nome_arquivo):
     file.close()
 
     print("Receita atualizada com sucesso!")
+
+def filtrar_por_ingrediente(ingrediente):
+ 
+             try:    
+                receitas_filtradas_ingrediente = []
+                ingredientes = open("receitas.txt", "r", encoding="utf8")
+                for receita in ingredientes:
+                     receita = receita.strip()
+                
+                     file = open(f"{receita}.txt", "r", encoding="utf8")
+                     for linha in file:
+                         if ingrediente in linha:
+                             receitas_filtradas_ingrediente.append(receita) 
+                             break
+                     file.close()
+            
+                ingredientes.close()
+                for i  in range(len(receitas_filtradas_ingrediente)):
+                  file = open(f"{receitas_filtradas_ingrediente[i]}.txt","r",encoding="utf8")
+                  print(file.read())
+                  file.close()
+             
+              
+             except FileNotFoundError:
+                print("ingrediente não encontrado no banco de dados")
