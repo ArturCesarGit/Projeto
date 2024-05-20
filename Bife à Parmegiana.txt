@@ -1,0 +1,22 @@
+nome: Bife à Parmegiana
+
+país: itália
+
+Ingredientes:
+- Bifes de carne bovina (como filé mignon, contrafilé)
+- Farinha de trigo
+- Ovos batidos
+- Farinha de rosca
+- Molho de tomate
+- Queijo muçarela
+- Queijo parmesão ralado
+- Sal e pimenta a gosto
+- Azeite de oliva
+
+Modo de preparo:
+1. Tempere os bifes com sal e pimenta
+2. Passe os bifes pela farinha de trigo, pelos ovos batidos e pela farinha de rosca
+3. Frite os bifes em azeite quente até dourarem dos dois lados
+4. Em um refratário, coloque uma camada de molho de tomate, os bifes fritos, mais molho por cima e cubra com queijo muçarela e parmesão
+5. Asse em forno pré-aquecido a 180°C até que o queijo derreta e fique dourado
+6. Sirva quente acompanhado de espaguete ao sugo
