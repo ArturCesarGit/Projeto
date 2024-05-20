@@ -204,3 +204,50 @@ def filtrar_por_ingrediente(ingrediente):
               
              except FileNotFoundError:
                 print("ingrediente não encontrado no banco de dados")
+def menu():
+    while True:
+        
+            print("1 - cadastrar receita")
+            print("2 - excluir receita")
+            print("3 - atualizar receita")
+            print("4 - visualizar receita")
+            print("5 - acessar receitas favoritas")
+            print("6 - buscar por país")
+            print("7 - buscar por ingrediente")
+            print("8 - buscar receita aleatoria")
+            print("9 - encerrar")
+            escolha = int(input())
+            if escolha == 1:
+                cadastrar_receita()
+            elif escolha == 2:
+                receita = input("digite o nome da receita que deseja excluir")
+                excluir_receita(receita)
+            elif escolha == 3:
+                receita = input("digite o nome da receita que deseja atualizar: ")
+                atualizar_receita(receita)
+                visualizar(receita)
+            
+            elif escolha == 4:
+                receita = input("digite o nome da receita que deseja visualizar: ")
+                visualizar(receita)
+            elif escolha == 5:
+                printar_favoritas()
+                
+                excluir_receita(receita)
+            elif escolha == 6:
+                receita = input("digite o nome do país que deseja filtrar: ")
+                filtrar_por_pais(receita)
+            elif escolha == 7:
+                ingrediente = input("digite o ingrediente que deseja filtrar: ")
+                filtrar_por_ingrediente(ingrediente)
+            elif escolha == 8:
+                aleatoria()
+            elif escolha == 9:
+                break
+            
+             
+            
+
+                
+        
+menu()
