@@ -43,5 +43,46 @@ def visualizar(receita):
             printar.close()
     except FileNotFoundError:
         print("arquivo não encontrado")
+def cadastrar_receita():
+    try:
+        j = 0
+        ingredientes = []
+        preparo = []
+        nome = input("Digite o nome da receita: ")
+        pais = input("Digite o país da receita: ")
+        qnti = int(input("Digite quantos ingredientes tem a receita: "))
 
+        nova_receita = open(f"{nome}.txt", "w", encoding="utf8")
+        nova_receita.write(f"Nome: {nome}\n")
+        nova_receita.write("\n")
+        nova_receita.write(f"País: {pais}\n")
+        nova_receita.write("\n")
+        nova_receita.write("Ingredientes:\n")
 
+        for i in range(qnti):
+            ingredientes.append(input(f"Digite o {i+1}° ingrediente da receita: "))
+            nova_receita.write(f"- {ingredientes[i]}.\n")
+        nova_receita.write("\n")
+        nova_receita.write("Modo de Preparo:\n")
+        
+        while True:
+            preparo.append(input(f"Digite o {j+1}° passo da receita: "))
+            nova_receita.write(f"{j +1}. {preparo[j]}.\n")
+            alt = input("Deseja adicionar mais um passo a receita? (s/n): ").lower()
+            j += 1
+            if alt == "n":
+                break
+        
+        fav = input("Deseja adicionar essa receita à lista de receitas favoritas? [S/N] : ").lower()
+        if fav == 's':
+            favoritar(nome)
+        
+        nova_receita.close()
+        with open("receitas.txt", "a", encoding="utf8") as banco:
+            banco.write(f"\n{nome}\n")
+        
+        visualizar(nome)
+    
+
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
