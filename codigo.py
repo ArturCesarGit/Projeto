@@ -120,7 +120,7 @@ def filtrar_por_pais(pais):
                          if pais in linha:
                              receitas_filtradas.append(receita) 
                              break
-                         file.close()
+                      file.close()
             
                 paises.close()
                 for i  in range(len(receitas_filtradas)):
